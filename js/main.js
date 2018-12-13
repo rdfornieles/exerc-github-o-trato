@@ -4,6 +4,8 @@
 
 const inputEl = document.querySelector(".nickName");
 
+let inputValue = inputEl.value;
+
 const btnEl = document.querySelector(".btn");
 
 const container = document.querySelector(".container");
@@ -11,7 +13,7 @@ const container = document.querySelector(".container");
 
 function userName() {
     event.preventDefault();
-    fetch('https://api.github.com/users/:username')
+    fetch(`https://api.github.com/users/${inputValue}`)
     .then(function(response) {
         console.log('response',response);
         return response.json();
@@ -20,6 +22,8 @@ function userName() {
         console.log(data);
         console.log(data.name);
         
+        
 })
 }
+
 btnEl.addEventListener('click', userName);
