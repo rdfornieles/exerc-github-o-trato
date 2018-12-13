@@ -4,15 +4,14 @@
 
 const inputEl = document.querySelector(".nickName");
 
-let inputValue = inputEl.value;
-
 const btnEl = document.querySelector(".btn");
 
 const container = document.querySelector(".container");
 
 
-function userName() {
+function userName(event) {
     event.preventDefault();
+    let inputValue = inputEl.value;
     fetch(`https://api.github.com/users/${inputValue}`)
     .then(function(response) {
         console.log('response',response);
