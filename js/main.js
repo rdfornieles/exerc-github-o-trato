@@ -18,7 +18,7 @@ function userName(event) {
         return response.json();
     })
     .then(function(data) {
-        const fullName = data.name.split("");
+        const fullName = data.name.split(" ");
         const justName = fullName[0];
         console.log(data.name);
         console.log(fullName);
