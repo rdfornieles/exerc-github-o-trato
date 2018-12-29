@@ -6,7 +6,7 @@ const inputEl = document.querySelector(".nickName");
 
 const btnEl = document.querySelector(".btn");
 
-const listEl = document.querySelector(".container");
+const listEl = document.querySelector(".list");
 
 
 function userName(event) {
@@ -26,7 +26,7 @@ function userName(event) {
 
         let name = '';
         for (let i = 0; i < justName.length; i++) {
-            name += `<ol><li>${justName[i]}</li></ol>`;
+            name += `<li class="li">${justName[i]}</li>`;
         }
         listEl.innerHTML = name;
 });
